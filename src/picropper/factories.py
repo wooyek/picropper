@@ -8,7 +8,7 @@ from . import models
 fake = faker.Faker()
 
 
-class SampleModelFactory(factory.DjangoModelFactory):
+class ImageModelFactory(factory.DjangoModelFactory):
     name = factory.Faker('name')
     user = factory.SubFactory(UserFactory)
 
