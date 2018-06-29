@@ -96,6 +96,9 @@ setup(
     },
     python_requires='>=2.7',
     install_requires=install_requires,
+    dependency_links=[
+        'file:///' + os.path.dirname(__file__) + '/requirements/local',
+    ],
     license="GNU General Public License v3",
     zip_safe=False,
     keywords='picropper',

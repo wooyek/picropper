@@ -76,11 +76,12 @@ Quickstart
 
     $ python manage.py check
     $ pytest
-    $ inv lint
+    $ inv check
     $ tox
 
 5. Initialize development database and fill it with test data::
 
+    $ bash bin/database_create.sh
     $ inv db
 
 6. Create a branch for local development and start development server::
