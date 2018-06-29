@@ -23,13 +23,12 @@
     "serve-static": "^1.13.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
-    "@fortawesome/fontawesome-free-webfonts": "^1.0.4",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "jquery-easing": "0.0.1",
     "popper.js": "^1.12.2",
-    "tooltip.js": "^1.1.5"
+    "tooltip.js": "^1.1.5",
+    "hoek": "^4.2.1"
   }
 }
