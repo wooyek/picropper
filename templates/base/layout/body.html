@@ -4,6 +4,7 @@
 <!--
     (c)2018 Janusz Skonieczny
     Author: Janusz Skonieczny @wooyek
+	Version: {{ system.website }} {{ system.revision }} {{ settings.ENVIRONMENT_NAME }}
 -->
 <html class="no-js" lang="{{ request.LANGUAGE_CODE }}"> <!--<![endif]-->
 <head>
@@ -35,7 +36,7 @@
 {% assets "js" %}
   <script type="text/javascript" src="{{ ASSET_URL }}"></script>
 {% endassets %}
-{% if settings.ENVIRONMENT_NAME %}<div class="watermark">{{ settings.ENVIRONMENT_NAME }}</div>{% endif %}
+{% if settings.ENVIRONMENT_NAME %}<div class="watermark">{{ settings.ENVIRONMENT_NAME }} {{ system.website }} {{ system.revision }}</div>{% endif %}
 </body>
 </html>
 

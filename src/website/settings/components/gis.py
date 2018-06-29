@@ -8,9 +8,14 @@
 
 import logging
 
+from website import __version__
 from . import core
 
 log = logging.getLogger(__name__)
+
+core.INSTALLED_APPS += (
+    'django.contrib.gis',
+)
 
 if core.DATABASES['default']['ENGINE'] == 'django.contrib.gis.db.backends.postgis':
     core.DATABASES['default']['OPTIONS']['options'] = '-c search_path=gis,public,pg_catalog'

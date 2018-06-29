@@ -8,6 +8,7 @@ include newrelic.ini
 include *.py
 include *.rst
 include *.yml
+include *.js
 include *.in
 include *.txt
 include .bumpversion.cfg
@@ -75,6 +76,9 @@ recursive-include assets *.woff
 recursive-include assets *.woff2
 recursive-include fixtures *.csv
 recursive-include fixtures *.yaml
+recursive-include theme *.js
+recursive-include theme *.md
+recursive-include theme *.scss
 
 exclude assets/compressed/.webassets-cache
 recursive-exclude assets/compressed/.webassets-cache *

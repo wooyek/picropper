@@ -10,6 +10,7 @@ Changing keys and secrets should not have that impact.
 
 import logging
 import os
+import sys
 from pathlib import Path
 
 import environ
@@ -25,19 +26,23 @@ print("""
 ╔═════════════════════════════╗
 ║ LOADING PRODUCTION SETTINGS ║
 ╚═════════════════════════════╝
-""")
+""", file=sys.stderr)
 
 # Set defaults for when env file is not present.
 os.environ.update(DEBUG='False', ASSETS_DEBUG='False')
 
 # This will read missing environment variables from a file
 # We want to do this before loading any base settings as they may depend on environment
-evironment_config = Path(__file__).with_suffix('.env')
-if evironment_config.exists():
-    environ.Env.read_env(str(evironment_config))
+environment_config = Path(__file__).with_suffix('.env')
+if environment_config.exists():
+    environ.Env.read_env(str(environment_config))
 
 # noinspection PyUnresolvedReferences
 from .base import *  # noqa: F402, F403 isort:skip
+
+DATABASES['default']['OPTIONS'] = {  # noqa: F405
+    'sslmode': 'require',
+}
 
 LOGGING['handlers']['console']['formatter'] = 'heroku'  # noqa: F405
 LOGGING['handlers']['file'] = {  # noqa: F405

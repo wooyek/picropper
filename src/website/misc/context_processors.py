@@ -8,7 +8,6 @@
 
 import functools
 import logging
-import os
 import platform
 import subprocess
 
@@ -17,7 +16,15 @@ from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.deprecation import MiddlewareMixin
 
-from website import __version__ as VERSION
+from website import __version__
+
+
+def website_settings(request):
+    from django.conf import settings
+
+    return {
+        'settings': settings,
+    }
 
 
 def system_info(request):
@@ -26,7 +33,7 @@ def system_info(request):
     }
 
 
-def current_site(request):
+def current_site(request):  # noqa
     return {
         'site': get_current_site(request),
     }
@@ -38,10 +45,10 @@ def get_website_version():
         from raven import fetch_git_sha
         from raven.exceptions import InvalidGitRepository
         try:
-            return fetch_git_sha(os.path.dirname(os.pardir))
+            return fetch_git_sha(str(settings.BASE_DIR))[:5]
         except InvalidGitRepository:
             return ''
-    except ImportError:
+    except ImportError:  # noqa
         command = 'git rev-parse HEAD'
         process = subprocess.Popen(command.split(), stdout=subprocess.PIPE, cwd=str(settings.BASE_DIR))
         return process.communicate()[0].decode()
@@ -52,14 +59,14 @@ def get_system_info():
     DJANGO_VERSION = django.get_version()
     PY_VERSION = platform.python_version()
     try:
-        SOURCE_VERSION = get_website_version()
-    except Exception as ex:
+        SOURCE_VERSION = get_website_version() or settings.SOURCE_VERSION[:5]
+    except Exception as ex:  # noqa
         logging.error("", exc_info=ex)
-        SOURCE_VERSION = "?"
+        SOURCE_VERSION = settings.SOURCE_VERSION[:5]
     return {
         'django': DJANGO_VERSION,
         'python': PY_VERSION,
-        'website': VERSION,
+        'website': __version__,
         'revision': SOURCE_VERSION,
     }
 

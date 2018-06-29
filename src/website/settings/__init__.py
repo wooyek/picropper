@@ -14,22 +14,6 @@ if os.environ.get("DJANGO_SETTINGS_MODULE", None) == "website.settings":
     if len(sys.argv) > 1 and sys.argv[1] == 'test':
         logging.info("Module website.settings is loading testing settings. Set DJANGO_SETTINGS_MODULE to override this.")
         from .testing import *  # noqa: F401, F403
-    else:
+    else:  # pragma: no cover
         logging.info("Module website.settings is loading development settings. Set DJANGO_SETTINGS_MODULE to override this.")
         from .development import *  # noqa: F401, F403
-
-# This will make sure the app is always imported when
-# Django starts so that shared_task will use this app.
-# from ..celery import app as celery_app  # noqa
-
-
-def context_processor(request):
-    from django.conf import settings
-    from django.utils import translation
-    return {
-        'intercom': {"app_id": settings.INTERCOM_APP_ID},
-        'BASE_URL': settings.BASE_URL,
-        'GOOGLE_ANALYTICS_TRACKING_CODE': settings.GOOGLE_ANALYTICS_TRACKING_CODE,
-        'LANGUAGE_CODE': translation.get_language(),
-        'ENVIRONMENT_NAME': settings.ENVIRONMENT_NAME,
-    }

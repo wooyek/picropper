@@ -205,17 +205,21 @@ header .navbar {
 
 body .watermark {
   position: absolute;
-  bottom: 0.3em;
-  left: -0.3em;
+  top: 10px;
+  left: -5px;
+  font-size: 1em;
+  @media (min-width: 576px) {
+    font-size: 2em;
+  }
   @media (min-width: 992px) {
-    bottom: 0.5em;
-    left: 0em;
+    top: 0.5em;
+    left: 0;
+    font-size: 3em;
   }
   z-index: 1000;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   transform: rotate(-90deg) translateX(-100%) translateY(0%);
-  transform-origin: 0em 0em;
-  font-size: 5em;
+  transform-origin: 0 0;
   opacity: 0.6;
   color: #ff9300;
 }

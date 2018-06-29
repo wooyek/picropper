@@ -16,7 +16,7 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 DEBUG_TOOLBAR_CONFIG = {
     # This will break webclient tests as django forces DEBUG=False within tests
     # https://docs.djangoproject.com/en/1.8/topics/testing/advanced/#django.test.runner.DiscoverRunner.setup_test_environment
-    "SHOW_TOOLBAR_CALLBACK": 'website.debug.show_debug_toolbar',
+    "SHOW_TOOLBAR_CALLBACK": 'website.misc.debug.show_debug_toolbar',
 }
 
 DEBUG_TOOLBAR_PANELS = [

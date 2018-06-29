@@ -19,12 +19,12 @@ body {
 
 /* line 30, theme/styles/screen.scss */
 .body-header {
-  background-color: #1f1459; }
+  background-color: #343a40; }
 
 /* line 34, theme/styles/screen.scss */
 .body-footer {
   position: absolute;
-  background-color: #1f1459;
+  background-color: #343a40;
   bottom: 0;
   width: 100%;
   height: 3rem;
@@ -35,7 +35,7 @@ body {
     text-transform: uppercase; }
   /* line 45, theme/styles/screen.scss */
   .body-footer .container {
-    background-color: #1f1459; }
+    background-color: #343a40; }
 
 /* line 52, theme/styles/screen.scss */
 .card {
@@ -68,7 +68,7 @@ body {
 /* line 83, theme/styles/screen.scss */
 .delivery .status {
   color: #FFFFFF;
-  background: #e6007e; }
+  background: #e83e8c; }
   /* line 86, theme/styles/screen.scss */
   .delivery .status .entry {
     text-transform: uppercase; }
@@ -91,7 +91,7 @@ body {
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #1f1459;
+  background-color: #343a40;
   color: #ffffff;
   font-size: 1rem;
   margin-bottom: 0;
@@ -104,7 +104,7 @@ body {
 
 /* line 104, theme/styles/screen.scss */
 .delivery .delivery {
-  background: #eee;
+  background: #6c757d;
   padding-bottom: 15px;
   padding-top: 15px; }
 
@@ -158,7 +158,7 @@ body {
 
 /* line 128, theme/styles/screen.scss */
 .delivery .btn {
-  color: #343434;
+  color: #212529;
   text-decoration: none; }
   /* line 131, theme/styles/screen.scss */
   .delivery .btn:hover {
@@ -167,7 +167,7 @@ body {
 
 /* line 135, theme/styles/screen.scss */
 .delivery .btn.collapsed {
-  background-color: #eee; }
+  background-color: #6c757d; }
 
 /* line 139, theme/styles/screen.scss */
 .delivery .btn-inner:after {
@@ -177,7 +177,7 @@ body {
   position: absolute;
   top: 28px;
   right: 18px;
-  color: #e6007e;
+  color: #e83e8c;
   background: no-repeat url("/static/assets/images/up.png"); }
 
 /* line 150, theme/styles/screen.scss */
@@ -260,19 +260,23 @@ header .navbar {
 /* line 206, theme/styles/screen.scss */
 body .watermark {
   position: absolute;
-  bottom: 0.3em;
-  left: -0.3em;
+  top: 10px;
+  left: -5px;
+  font-size: 1em;
   z-index: 1000;
-  text-transform: uppercase;
   -webkit-transform: rotate(-90deg) translateX(-100%) translateY(0%);
           transform: rotate(-90deg) translateX(-100%) translateY(0%);
-  -webkit-transform-origin: 0em 0em;
-          transform-origin: 0em 0em;
-  font-size: 5em;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
   opacity: 0.6;
   color: #ff9300; }
+  @media (min-width: 576px) {
+    /* line 206, theme/styles/screen.scss */
+    body .watermark {
+      font-size: 2em; } }
   @media (min-width: 992px) {
     /* line 206, theme/styles/screen.scss */
     body .watermark {
-      bottom: 0.5em;
-      left: 0em; } }
+      top: 0.5em;
+      left: 0;
+      font-size: 3em; } }

@@ -1,16 +1,12 @@
 {% load i18n %}
 <footer class="body-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <ul class="nav">
+    <div class="container">
+      <nav class="bg-dark navbar navbar-expand-sm navbar-dark">
+      <ul class="navbar-nav mr-auto bordered">
           <li class="nav-item"><a class="nav-link" href="#">{% trans "Privacy Policy" %}</a></li>
           <li class="nav-item"><a class="nav-link" href="#">{% trans "Contact" %}</a></li>
         </ul>
-      </div>
-      <div class="col">
-        <p class="text-right navbar-text mb-0">Antalis Copyright &copy; 2018 {{ cookiecutter.copyright }}. All rights reserved</p>
-      </div>
+        <p class="navbar-text mb-0">{{ cookiecutter.copyright }} Copyright &copy; 2018. All rights reserved</p>
+      </nav>
     </div>
-  </div>
 </footer>

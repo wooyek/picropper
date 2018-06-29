@@ -18,7 +18,7 @@ class XHeadersMiddleware(MiddlewareMixin):
         return response
 
 
-class ProcessErrorsMiddleware(object):
+class ProcessErrorsMiddleware(object):  # pragma: no cover
     def process_exception(self, request, exception):
         if settings.DEBUG:
             return

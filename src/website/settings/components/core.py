@@ -30,6 +30,7 @@ gettext_noop = lambda s: s  # noqa: E731
 DEBUG = env('DEBUG', bool, False)
 logging.debug("DEBUG: %s", DEBUG)
 ENVIRONMENT_NAME = env('ENVIRONMENT_NAME', default='')
+SOURCE_VERSION = env('SOURCE_VERSION', default='') or env('GIT_REV', default='')
 
 SITE_ID = 1
 
@@ -65,7 +66,7 @@ ADMINS = (
 if 'ADMINS' in os.environ:
     from email.utils import getaddresses
 
-    admins = os.environ['ADMINS'].split(";")
+    admins = os.environ['ADMINS'].split(",")
     addresses = getaddresses(admins)
     ADMINS = [(name, named_email) for ((name, email), named_email) in zip(addresses, admins)]
 
@@ -84,7 +85,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis',
 )
 
 MIDDLEWARE = (
@@ -120,6 +120,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'website.misc.context_processors.website_settings',
             ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
@@ -136,29 +137,11 @@ FIXTURE_DIRS = [str(BASE_DIR / 'fixtures')]
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-if "DATABASE_URL" in os.environ:  # pragma: no cover
-    # Enable database config through environment
-    DATABASES = {
-        'default': env.db(),  # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    }
+DATABASES = {
+    'default': env.db(),
+}
+DATABASES['default']['TEST'] = {'NAME': env("DATABASE_TEST_NAME", default=None)}
 
-    if DATABASES['default']['ENGINE'] == 'django.db.backends.postgresql_psycopg2':
-        DATABASES['default']['TEST'] = {'NAME': env("DATABASE_TEST_NAME", default=None)}
-        DATABASES['default']['OPTIONS'] = {
-            'sslmode': 'require',
-        }
-else:
-    # A fallback default
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            # 'ENGINE': 'django.contrib.gis.db.backends.spatialite',
-            'NAME': str(BASE_DIR / 'data' / 'db.dev.sqlite3'),
-            'TEST': {
-                'NAME': str(BASE_DIR / 'data' / 'db.test.sqlite3'),
-            }
-        }
-    }
 
 # The email backend to use. For possible shortcuts see django.core.mail.
 # The default is to use the SMTP backend.
@@ -178,12 +161,15 @@ LANGUAGES = (
     ('en', gettext_noop('English')),
     ('pl', gettext_noop('Polish')),
 )
-TIME_ZONE = 'Europe/Warsaw'
+
+# Europe/Warsaw and Poland does not play well with PYTZ
+# https://en.wikipedia.org/wiki/UTC%2B01:24
+TIME_ZONE = 'UTC'
 USE_I18N = True
 
 # https://docs.djangoproject.com/en/1.9/topics/i18n/translation/#how-django-discovers-language-preference
 LOCALE_PATHS = [
-    str(BASE_DIR / 'locale'),
+    str(BASE_DIR / 'locales'),
 ]
 
 USE_L10N = True
@@ -192,9 +178,9 @@ USE_TZ = True
 # Python module path where user will place custom format definition.
 # The directory where this setting is pointing should contain subdirectories
 # named as the locales, containing a formats.py file
-# (i.e. "myproject.locale" for myproject/locale/en/formats.py etc. use)
+# (i.e. "myproject.locales" for myproject/locales/en/formats.py etc. use)
 FORMAT_MODULE_PATH = [
-    'website.locale',
+    'website.locales',
 ]
 
 # Static files (CSS, JavaScript, Images)
@@ -229,13 +215,12 @@ IGNORABLE_404_URLS = (
 # http://django-guardian.readthedocs.org/en/v1.2/configuration.html
 
 ANONYMOUS_USER_ID = -1
-# AUTH_USER_MODEL = 'picropper.CustomUser'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',  # this is default
 )
 
-LOGIN_URL = '/accounts/login/'
+LOGIN_URL = '/admin/login/'
 LOGOUT_URL = '/accounts/logout/'
 LOGIN_REDIRECT_URL = '/'
 
@@ -248,6 +233,10 @@ LOGGING = {
         'short': {
             'format': '%(asctime)s %(levelname)-7s %(thread)-5d %(message)s',
             'datefmt': '%H:%M:%S',
+        },
+        'tracing': {
+            'format': '%(asctime)s %(levelname)-7s %(thread)-5d %(name)s %(filename)s:%(lineno)s | %(funcName)s | %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
         },
         # this may slow down the app a little, due to
         'verbose': {
@@ -310,6 +299,7 @@ LOGGING = {
         'django.db.backends': {
             'handlers': ['console'],
             'propagate': True,
+            # Set this to DEBUG to log SQL queries
             'level': 'WARNING',
         },
         'factory.generate': {
@@ -349,10 +339,10 @@ LOGGING = {
     },
     'root': {
         'level': 'DEBUG',
-        'handlers': ['console'],
+        'handlers': ['console', 'mail_admins'],
     }
 }
 
 # Default exception reporter filter class used in case none has been
 # specifically assigned to the HttpRequest instance.
-DEFAULT_EXCEPTION_REPORTER_FILTER = 'website.debug.SaferExceptionReporterFilter'
+DEFAULT_EXCEPTION_REPORTER_FILTER = 'website.misc.debug.SaferExceptionReporterFilter'

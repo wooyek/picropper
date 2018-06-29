@@ -10,7 +10,7 @@
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
-  --pink: #e6007e;
+  --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
@@ -21,13 +21,13 @@
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #007bff;
-  --secondary: #eee;
+  --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
-  --dark: #1f1459;
+  --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -66,7 +66,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #343434;
+  color: #212529;
   text-align: left;
   background-color: #fff; }
 
@@ -506,7 +506,7 @@ mark,
 /* line 2, node_modules/bootstrap/scss/_code.scss */
 code {
   font-size: 87.5%;
-  color: #e6007e;
+  color: #e83e8c;
   word-break: break-word; }
   /* line 8, node_modules/bootstrap/scss/_code.scss */
   a > code {
@@ -1714,15 +1714,15 @@ pre {
 .table-secondary,
 .table-secondary > th,
 .table-secondary > td {
-  background-color: #fafafa; }
+  background-color: #d6d8db; }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
 .table-hover .table-secondary:hover {
-  background-color: #ededed; }
+  background-color: #c8cbcf; }
   /* line 23, node_modules/bootstrap/scss/mixins/_table-row.scss */
   .table-hover .table-secondary:hover > td,
   .table-hover .table-secondary:hover > th {
-    background-color: #ededed; }
+    background-color: #c8cbcf; }
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 .table-success,
@@ -1798,15 +1798,15 @@ pre {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #c0bdd1; }
+  background-color: #c6c8ca; }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
 .table-hover .table-dark:hover {
-  background-color: #b2aec7; }
+  background-color: #b9bbbe; }
   /* line 23, node_modules/bootstrap/scss/mixins/_table-row.scss */
   .table-hover .table-dark:hover > td,
   .table-hover .table-dark:hover > th {
-    background-color: #b2aec7; }
+    background-color: #b9bbbe; }
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 .table-active,
@@ -2008,7 +2008,7 @@ select.form-control:focus::-ms-value {
   padding-bottom: 0.375rem;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #343434;
+  color: #212529;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
@@ -2495,34 +2495,34 @@ fieldset:disabled a.btn {
 
 /* line 64, node_modules/bootstrap/scss/_buttons.scss */
 .btn-secondary {
-  color: #212529;
-  background-color: #eee;
-  border-color: #eee; }
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d; }
   /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-secondary:hover {
-    color: #212529;
-    background-color: #dbdbdb;
-    border-color: #d5d5d5; }
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62; }
   /* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-secondary:focus, .btn-secondary.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
   /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-secondary.disabled, .btn-secondary:disabled {
-    color: #212529;
-    background-color: #eee;
-    border-color: #eee; }
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d; }
   /* line 36, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
   .show > .btn-secondary.dropdown-toggle {
-    color: #212529;
-    background-color: #d5d5d5;
-    border-color: #cecece; }
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b; }
     /* line 46, node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-secondary.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
 
 /* line 64, node_modules/bootstrap/scss/_buttons.scss */
 .btn-success {
@@ -2682,33 +2682,33 @@ fieldset:disabled a.btn {
 /* line 64, node_modules/bootstrap/scss/_buttons.scss */
 .btn-dark {
   color: #fff;
-  background-color: #1f1459;
-  border-color: #1f1459; }
+  background-color: #343a40;
+  border-color: #343a40; }
   /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
   .btn-dark:hover {
     color: #fff;
-    background-color: #140d3a;
-    border-color: #100b2f; }
+    background-color: #23272b;
+    border-color: #1d2124; }
   /* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-dark:focus, .btn-dark.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
   /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-dark.disabled, .btn-dark:disabled {
     color: #fff;
-    background-color: #1f1459;
-    border-color: #1f1459; }
+    background-color: #343a40;
+    border-color: #343a40; }
   /* line 36, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
   .show > .btn-dark.dropdown-toggle {
     color: #fff;
-    background-color: #100b2f;
-    border-color: #0d0825; }
+    background-color: #1d2124;
+    border-color: #171a1d; }
     /* line 46, node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-dark.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
 /* line 70, node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-primary {
@@ -2743,34 +2743,34 @@ fieldset:disabled a.btn {
 
 /* line 70, node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-secondary {
-  color: #eee;
+  color: #6c757d;
   background-color: transparent;
   background-image: none;
-  border-color: #eee; }
+  border-color: #6c757d; }
   /* line 63, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-secondary:hover {
-    color: #212529;
-    background-color: #eee;
-    border-color: #eee; }
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d; }
   /* line 69, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
   /* line 74, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-    color: #eee;
+    color: #6c757d;
     background-color: transparent; }
   /* line 80, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
   .show > .btn-outline-secondary.dropdown-toggle {
-    color: #212529;
-    background-color: #eee;
-    border-color: #eee; }
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d; }
     /* line 87, node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-secondary.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(238, 238, 238, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
 
 /* line 70, node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-success {
@@ -2929,34 +2929,34 @@ fieldset:disabled a.btn {
 
 /* line 70, node_modules/bootstrap/scss/_buttons.scss */
 .btn-outline-dark {
-  color: #1f1459;
+  color: #343a40;
   background-color: transparent;
   background-image: none;
-  border-color: #1f1459; }
+  border-color: #343a40; }
   /* line 63, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #1f1459;
-    border-color: #1f1459; }
+    background-color: #343a40;
+    border-color: #343a40; }
   /* line 69, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-dark:focus, .btn-outline-dark.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
   /* line 74, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-    color: #1f1459;
+    color: #343a40;
     background-color: transparent; }
   /* line 80, node_modules/bootstrap/scss/mixins/_buttons.scss */
   .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
   .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
-    background-color: #1f1459;
-    border-color: #1f1459; }
+    background-color: #343a40;
+    border-color: #343a40; }
     /* line 87, node_modules/bootstrap/scss/mixins/_buttons.scss */
     .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-dark.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(31, 20, 89, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
 /* line 81, node_modules/bootstrap/scss/_buttons.scss */
 .btn-link {
@@ -3074,7 +3074,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #343434;
+  color: #212529;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -4782,13 +4782,13 @@ input[type="button"].btn-block {
 
 /* line 44, node_modules/bootstrap/scss/_badge.scss */
 .badge-secondary {
-  color: #212529;
-  background-color: #eee; }
+  color: #fff;
+  background-color: #6c757d; }
   /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
   .badge-secondary[href]:hover, .badge-secondary[href]:focus {
-    color: #212529;
+    color: #fff;
     text-decoration: none;
-    background-color: #d5d5d5; }
+    background-color: #545b62; }
 
 /* line 44, node_modules/bootstrap/scss/_badge.scss */
 .badge-success {
@@ -4843,12 +4843,12 @@ input[type="button"].btn-block {
 /* line 44, node_modules/bootstrap/scss/_badge.scss */
 .badge-dark {
   color: #fff;
-  background-color: #1f1459; }
+  background-color: #343a40; }
   /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
   .badge-dark[href]:hover, .badge-dark[href]:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #100b2f; }
+    background-color: #1d2124; }
 
 /* line 1, node_modules/bootstrap/scss/_jumbotron.scss */
 .jumbotron {
@@ -4908,15 +4908,15 @@ input[type="button"].btn-block {
 
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
 .alert-secondary {
-  color: #7c7c7c;
-  background-color: #fcfcfc;
-  border-color: #fafafa; }
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db; }
   /* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-secondary hr {
-    border-top-color: #ededed; }
+    border-top-color: #c8cbcf; }
   /* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-secondary .alert-link {
-    color: #636363; }
+    color: #202326; }
 
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
 .alert-success {
@@ -4980,15 +4980,15 @@ input[type="button"].btn-block {
 
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
 .alert-dark {
-  color: #100a2e;
-  background-color: #d2d0de;
-  border-color: #c0bdd1; }
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca; }
   /* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-dark hr {
-    border-top-color: #b2aec7; }
+    border-top-color: #b9bbbe; }
   /* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
   .alert-dark .alert-link {
-    color: #010104; }
+    color: #040505; }
 
 @-webkit-keyframes progress-bar-stripes {
   from {
@@ -5086,7 +5086,7 @@ input[type="button"].btn-block {
     background-color: #f8f9fa; }
   /* line 32, node_modules/bootstrap/scss/_list-group.scss */
   .list-group-item-action:active {
-    color: #343434;
+    color: #212529;
     background-color: #e9ecef; }
 
 /* line 43, node_modules/bootstrap/scss/_list-group.scss */
@@ -5151,17 +5151,17 @@ input[type="button"].btn-block {
 
 /* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-secondary {
-  color: #7c7c7c;
-  background-color: #fafafa; }
+  color: #383d41;
+  background-color: #d6d8db; }
   /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
   .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-    color: #7c7c7c;
-    background-color: #ededed; }
+    color: #383d41;
+    background-color: #c8cbcf; }
   /* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
   .list-group-item-secondary.list-group-item-action.active {
     color: #fff;
-    background-color: #7c7c7c;
-    border-color: #7c7c7c; }
+    background-color: #383d41;
+    border-color: #383d41; }
 
 /* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-success {
@@ -5235,17 +5235,17 @@ input[type="button"].btn-block {
 
 /* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
 .list-group-item-dark {
-  color: #100a2e;
-  background-color: #c0bdd1; }
+  color: #1b1e21;
+  background-color: #c6c8ca; }
   /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
   .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-    color: #100a2e;
-    background-color: #b2aec7; }
+    color: #1b1e21;
+    background-color: #b9bbbe; }
   /* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
   .list-group-item-dark.list-group-item-action.active {
     color: #fff;
-    background-color: #100a2e;
-    border-color: #100a2e; }
+    background-color: #1b1e21;
+    border-color: #1b1e21; }
 
 /* line 1, node_modules/bootstrap/scss/_close.scss */
 .close {
@@ -5702,7 +5702,7 @@ button.close {
 /* line 180, node_modules/bootstrap/scss/_popover.scss */
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #343434; }
+  color: #212529; }
 
 /* line 11, node_modules/bootstrap/scss/_carousel.scss */
 .carousel {
@@ -5974,13 +5974,13 @@ button.bg-primary:focus {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-secondary {
-  background-color: #eee !important; }
+  background-color: #6c757d !important; }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #d5d5d5 !important; }
+  background-color: #545b62 !important; }
 
 /* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-success {
@@ -6034,13 +6034,13 @@ button.bg-light:focus {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
 .bg-dark {
-  background-color: #1f1459 !important; }
+  background-color: #343a40 !important; }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #100b2f !important; }
+  background-color: #1d2124 !important; }
 
 /* line 13, node_modules/bootstrap/scss/utilities/_background.scss */
 .bg-white {
@@ -6096,7 +6096,7 @@ button.bg-dark:focus {
 
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-secondary {
-  border-color: #eee !important; }
+  border-color: #6c757d !important; }
 
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-success {
@@ -6120,7 +6120,7 @@ button.bg-dark:focus {
 
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-dark {
-  border-color: #1f1459 !important; }
+  border-color: #343a40 !important; }
 
 /* line 25, node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-white {
@@ -8861,11 +8861,11 @@ a.text-primary:hover, a.text-primary:focus {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-secondary {
-  color: #eee !important; }
+  color: #6c757d !important; }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 a.text-secondary:hover, a.text-secondary:focus {
-  color: #d5d5d5 !important; }
+  color: #545b62 !important; }
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-success {
@@ -8909,15 +8909,15 @@ a.text-light:hover, a.text-light:focus {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-dark {
-  color: #1f1459 !important; }
+  color: #343a40 !important; }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 a.text-dark:hover, a.text-dark:focus {
-  color: #100b2f !important; }
+  color: #1d2124 !important; }
 
 /* line 48, node_modules/bootstrap/scss/utilities/_text.scss */
 .text-body {
-  color: #343434 !important; }
+  color: #212529 !important; }
 
 /* line 49, node_modules/bootstrap/scss/utilities/_text.scss */
 .text-muted {
@@ -13248,12 +13248,12 @@ body {
 
 /* line 30, theme/styles/screen.scss */
 .body-header {
-  background-color: #1f1459; }
+  background-color: #343a40; }
 
 /* line 34, theme/styles/screen.scss */
 .body-footer {
   position: absolute;
-  background-color: #1f1459;
+  background-color: #343a40;
   bottom: 0;
   width: 100%;
   height: 3rem;
@@ -13264,7 +13264,7 @@ body {
     text-transform: uppercase; }
   /* line 45, theme/styles/screen.scss */
   .body-footer .container {
-    background-color: #1f1459; }
+    background-color: #343a40; }
 
 /* line 52, theme/styles/screen.scss */
 .card {
@@ -13297,7 +13297,7 @@ body {
 /* line 83, theme/styles/screen.scss */
 .delivery .status {
   color: #FFFFFF;
-  background: #e6007e; }
+  background: #e83e8c; }
   /* line 86, theme/styles/screen.scss */
   .delivery .status .entry {
     text-transform: uppercase; }
@@ -13320,7 +13320,7 @@ body {
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #1f1459;
+  background-color: #343a40;
   color: #ffffff;
   font-size: 1rem;
   margin-bottom: 0;
@@ -13333,7 +13333,7 @@ body {
 
 /* line 104, theme/styles/screen.scss */
 .delivery .delivery {
-  background: #eee;
+  background: #6c757d;
   padding-bottom: 15px;
   padding-top: 15px; }
 
@@ -13387,7 +13387,7 @@ body {
 
 /* line 128, theme/styles/screen.scss */
 .delivery .btn {
-  color: #343434;
+  color: #212529;
   text-decoration: none; }
   /* line 131, theme/styles/screen.scss */
   .delivery .btn:hover {
@@ -13396,7 +13396,7 @@ body {
 
 /* line 135, theme/styles/screen.scss */
 .delivery .btn.collapsed {
-  background-color: #eee; }
+  background-color: #6c757d; }
 
 /* line 139, theme/styles/screen.scss */
 .delivery .btn-inner:after {
@@ -13406,7 +13406,7 @@ body {
   position: absolute;
   top: 28px;
   right: 18px;
-  color: #e6007e;
+  color: #e83e8c;
   background: no-repeat url("/static/assets/images/up.png"); }
 
 /* line 150, theme/styles/screen.scss */
@@ -13489,19 +13489,23 @@ header .navbar {
 /* line 206, theme/styles/screen.scss */
 body .watermark {
   position: absolute;
-  bottom: 0.3em;
-  left: -0.3em;
+  top: 10px;
+  left: -5px;
+  font-size: 1em;
   z-index: 1000;
-  text-transform: uppercase;
   -webkit-transform: rotate(-90deg) translateX(-100%) translateY(0%);
           transform: rotate(-90deg) translateX(-100%) translateY(0%);
-  -webkit-transform-origin: 0em 0em;
-          transform-origin: 0em 0em;
-  font-size: 5em;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
   opacity: 0.6;
   color: #ff9300; }
+  @media (min-width: 576px) {
+    /* line 206, theme/styles/screen.scss */
+    body .watermark {
+      font-size: 2em; } }
   @media (min-width: 992px) {
     /* line 206, theme/styles/screen.scss */
     body .watermark {
-      bottom: 0.5em;
-      left: 0em; } }
+      top: 0.5em;
+      left: 0;
+      font-size: 3em; } }

@@ -23,7 +23,7 @@ core.INSTALLED_APPS += (
 ASSETS_LOAD_PATH = core.STATIC_ROOT
 ASSETS_ROOT = str(core.BASE_DIR / 'assets' / "compressed")
 ASSETS_DEBUG = core.env('ASSETS_DEBUG', bool, default=core.DEBUG)  # Disable when testing compressed file in DEBUG mode
-if ASSETS_DEBUG:
+if ASSETS_DEBUG:  # pragma: no cover
     ASSETS_URL = core.STATIC_URL
     ASSETS_MANIFEST = "json:{}".format(os.path.join(ASSETS_ROOT, "manifest.json"))
 else:

@@ -17,42 +17,38 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TIMEZONE = 'Europe/Warsaw'
 CELERY_ENABLE_UTC = True
 CELERY_SEND_TASK_ERROR_EMAILS = True
-CELERY_ALWAYS_EAGER = False
-CELERY_EAGER_PROPAGATES_EXCEPTIONS = False
 
-# http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html
+# http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html#crontab-schedules
 
 CELERYBEAT_SCHEDULE = {
-    'update-experience-stat': {
-        'task': 'resume.tasks.update_all_counters',
-        # 'schedule': crontab(hour=2, minute=30)
-        # 'schedule': crontab(minute='*/15')  # Execute every 15 minutes
-        'schedule': crontab(minute=0, hour=3, day_of_week=1)  # Execute weekly at 3 in the morning
+    'minutes': {
+        'task': 'website.misc.tasks.every_minute',
+        'schedule': crontab()  # Execute every minute
     },
-    'update-contry-stat': {
-        'task': 'resume.tasks.country_counter_update_all',
-        'schedule': crontab(minute=0, hour=8, day_of_week=1)
+    'hours': {
+        'task': 'website.misc.tasks.every_hour',
+        'schedule': crontab(minute=0)  # Execute every hour
+    },
+    'days': {
+        'task': 'website.misc.tasks.every_day',
+        'schedule': crontab(minute=0, hour=3)  # Execute daily at 3 in the morning
+    },
+    'mondays': {
+        'task': 'website.misc.tasks.every_monday',
+        'schedule': crontab(minute=0, hour=1, day_of_week=1)  # Execute weekly at 1 in the morning
     },
 }
 
 CELERY_QUEUES = {
     "celery": {},
-    "linkedin": {},
-    "external_postings": {},
     "beats": {
         "queue_arguments": {'x-message-ttl': 120000}
     },
-    "counters": {
+    "default_queue": {
         "queue_arguments": {'x-message-ttl': 120000}
     },
-    "dictionaries": {
+    "clock": {
         "queue_arguments": {'x-message-ttl': 120000}
-    },
-    "github": {
-        "queue_arguments": {}
-    },
-    "geocoding": {
-        "queue_arguments": {}
     },
 }
 
@@ -60,6 +56,7 @@ CELERY_QUEUES = {
 # http://docs.celeryproject.org/en/2.5/configuration.html?highlight=celery_always_eager#celery-always-eager
 
 CELERY_ALWAYS_EAGER = core.env('CELERY_ALWAYS_EAGER', bool, default=False)
-CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
+CELERY_EAGER_PROPAGATES_EXCEPTIONS = core.env('CELERY_EAGER_PROPAGATES_EXCEPTIONS', bool, default=True)
 
-BROKER_URL = core.env("BROKER_URL", default=None) or core.env("CLOUDAMQP_URL")
+BROKER_URL = core.env("CLOUDAMQP_URL", default=None) or core.env("BROKER_URL")
+
