@@ -5,8 +5,8 @@
     "Python",
     "Django"
   ],
-  "website": "git@github.com:wooyek/picropper.git",
-  "repository": "git@github.com:wooyek/picropper.git",
+  "website": "https://github.com/wooyek/picropper",
+  "repository": "https://github.com/wooyek/picropper",
   "addons": [
     "heroku-postgresql:hobby-dev"
   ],
