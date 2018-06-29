@@ -6,8 +6,8 @@ import faker
 from django import test
 from django.shortcuts import resolve_url
 
-from . import factories, models
 from website.misc.testing import UserTestCase
+from . import factories, models
 
 log = logging.getLogger(__name__)
 fake = faker.Faker()

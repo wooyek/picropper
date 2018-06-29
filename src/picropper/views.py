@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import resolve_url
-from django_powerbank.views.auth import AbstractAuthorizedView, AuthenticatedView
+from django_powerbank.views.auth import AuthenticatedView
 from filer.models import Image
 from pascal_templates import ListView
 from pascal_templates.views import CreateView, DetailView
-
-from . import models
 
 
 class ImageList(AuthenticatedView, ListView):
@@ -33,4 +31,3 @@ class ImageDetail(AuthenticatedView, DetailView):
         thumbnailer = self.object.easy_thumbnails_thumbnailer
         versions = [(option.name, thumbnailer.get_thumbnail(option.as_dict)) for option in options]
         return super().get_context_data(versions=versions, **kwargs)
-

@@ -10,8 +10,8 @@ import logging
 
 from google.oauth2 import service_account
 
-from . import core
 from website.settings import env
+from . import core
 
 log = logging.getLogger(__name__)
 

@@ -2,7 +2,7 @@
 from django.contrib import admin
 from import_export.admin import ImportExportMixin
 
-from . import models, resources
+from . import models
 
 
 @admin.register(models.Image)

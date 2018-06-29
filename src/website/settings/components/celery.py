@@ -59,4 +59,3 @@ CELERY_ALWAYS_EAGER = core.env('CELERY_ALWAYS_EAGER', bool, default=False)
 CELERY_EAGER_PROPAGATES_EXCEPTIONS = core.env('CELERY_EAGER_PROPAGATES_EXCEPTIONS', bool, default=True)
 
 BROKER_URL = core.env("CLOUDAMQP_URL", default=None) or core.env("BROKER_URL")
-

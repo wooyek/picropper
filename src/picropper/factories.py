@@ -2,8 +2,8 @@
 import factory
 import faker
 
-from . import models
 from website.misc.factories import UserFactory
+from . import models
 
 fake = faker.Faker()
 

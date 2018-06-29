@@ -49,7 +49,7 @@ from .components.pure_pagination import *  # noqa: F402 F403 isort:skip
 
 # Other imports can cause change in core settings
 # we should import core last
-from .components.core import env, BASE_DIR  # noqa: F402 F403 isort:skip
+# from .components.core import env, BASE_DIR  # noqa: F402 F403 isort:skip
 from .components.core import *  # noqa: F402 F403 isort:skip
 
 # │ Customizations made for this project only should go bellow

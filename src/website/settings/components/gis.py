@@ -8,7 +8,6 @@
 
 import logging
 
-from website import __version__
 from . import core
 
 log = logging.getLogger(__name__)
