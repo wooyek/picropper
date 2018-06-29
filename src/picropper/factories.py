@@ -13,4 +13,4 @@ class SampleModelFactory(factory.DjangoModelFactory):
     user = factory.SubFactory(UserFactory)
 
     class Meta:
-        model = models.SampleModel
+        model = models.Image
