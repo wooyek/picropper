@@ -208,7 +208,6 @@ STATIC_ROOT = str(BASE_DIR / 'static')
 STATICFILES_DIRS = (
     ('assets', str(BASE_DIR / 'assets')),
     ('vendor', str(BASE_DIR / 'vendor')),
-    ('styles', str(BASE_DIR / 'styles')),
 )
 
 # The default file storage backend used during the build process

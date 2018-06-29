@@ -28,6 +28,6 @@ psycopg2-binary
 pycountry
 pytz
 pathlib ; python_version < '3.3'
-# raven
+raven
 requests
 whitenoise

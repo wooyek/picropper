@@ -4,8 +4,8 @@
 from os.path import normcase
 
 CSS = (
-    "assets/css/bootstrap.css",
-    "assets/css/font-awesome.css",
+    "assets/css/bootstrap4.css",
+    "assets/css/font-awesome4.css",
     "assets/css/screen.css",
 )
 
