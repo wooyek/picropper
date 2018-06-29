@@ -79,6 +79,7 @@ recursive-include fixtures *.yaml
 recursive-include theme *.js
 recursive-include theme *.md
 recursive-include theme *.scss
+recursive-include media .gitignore
 
 exclude assets/compressed/.webassets-cache
 recursive-exclude assets/compressed/.webassets-cache *
