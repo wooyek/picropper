@@ -14,9 +14,12 @@ django-bootstrap-form
 django-debug-toolbar
 django-environ
 django-error-views
+# django-filer
+-e git+https://github.com/wooyek/django-filer.git@feature/django2-support#egg=filer
 django-formtools
 django-import-export
 #django-localflavor
+django-mptt>=0.9
 django-pascal-templates
 # django-polymodels
 django-powerbank

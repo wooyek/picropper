@@ -14,6 +14,16 @@
         </ul>
         <ul class="navbar-nav mt-2 mt-md-0">
             <li>
+              <a class="nav-link" href="{% url 'picropper:ImageCreate' %}">
+                <i class="fa fa-image"></i> {% trans "Create" %}
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="{% url 'picropper:ImageList' %}">
+                <i class="fa fa-list"></i> {% trans "List" %}
+              </a>
+            </li>
+            <li>
               <a class="nav-link" href="{% url 'admin:index' %}">
                 <i class="fa fa-cog"></i> {% trans "Admin" %}
               </a>

@@ -5,10 +5,8 @@ from import_export.admin import ImportExportMixin
 from . import models, resources
 
 
-@admin.register(models.SampleModel)
-class SampleModelAdmin(ImportExportMixin, admin.ModelAdmin):
-    resource_class = resources.SampleModelResource
+@admin.register(models.Image)
+class ImageAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = ('name', )
     list_filter = ('name', )
-    readonly_fields = ('name', )
-    # date_hierarchy = 'ts'
+    date_hierarchy = 'ts'

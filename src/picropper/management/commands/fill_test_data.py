@@ -20,9 +20,9 @@ class Command(BaseCommand):
         if not self.accept_state(**options):
             return  # noqa
         logging.info("Faking test data: %s", count)
-        from picropper import factories
-        items = factories.SampleModelFactory.create_batch(int(count))
-        log.info("Created: %s", items)
+        # from picropper import factories
+        # items = factories.SampleModelFactory.create_batch(int(count))
+        # log.info("Created: %s", items)
 
     # noinspection PyUnusedLocal
     @staticmethod
@@ -30,7 +30,7 @@ class Command(BaseCommand):
         if force:
             return True
         try:
-            assert models.SampleModel.objects.count() == 0
+            assert models.Image.objects.count() == 0
             return True
         except AssertionError as ex:
             if on_empty:

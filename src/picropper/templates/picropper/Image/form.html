@@ -1,0 +1,18 @@
+{% extends "base/layout/page.html" %}
+{% load bootstrap i18n %}
+{% block content %}
+  <div class="container pt-5">
+    <div class="col-md-6 offset-md-3">
+      <form action="" method="post">
+        <legend>{% trans "Dodaj obraz do przetworzenia" %}</legend>
+        {% csrf_token %}
+        <table>
+          {{ form|bootstrap }}
+        </table>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">{% trans "Dodaj obraz" %}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

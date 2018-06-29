@@ -40,6 +40,7 @@ from .components.sentry import *  # noqa: F402 F403 isort:skip
 from .components.newrelic import *  # noqa: F402 F403 isort:skip
 # from .components.django_opt_out import *  # noqa: F402 F403 isort:skip
 # from .components.django_email_queue import *  # noqa: F402 F403 isort:skip
+from .components.django_filer import *  # noqa: F402 F403 isort:skip
 # from .components.oauth_toolkit import * # noqa: F402 F403 isort:skip
 # from .components.rest_framework import *  # noqa: F402 F403 isort:skip
 # from .components.gis import *  # noqa: F402 F403 isort:skip
