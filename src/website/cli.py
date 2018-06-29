@@ -13,7 +13,7 @@ click_log.basic_config(log)
 
 
 @click.group()
-@click.option('-s', '--settings', type=click.Path(), help="File with multiinfo configuration settings")
+@click.option('-s', '--settings', type=click.Path(), help="File with configuration settings")
 @click_log.simple_verbosity_option(logging.getLogger())
 def main(settings):
     """Website CLI"""

@@ -1,2 +1,5 @@
-# This is here until pip-compile will freeze and generate proper requirements.txt
--r requirements.in
+# Redirect requirements to a locked/compiled/frozen file
+-r requirements/lock/production.txt
+
+# Allow installation of requirements from local folder
+--find-links=requirements/local

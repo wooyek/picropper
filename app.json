@@ -61,7 +61,11 @@
     }
   },
   "scripts": {
-    "postdeploy": "bin/post_deploy"
+    "postdeploy": "bin/post_deploy",
+    "dokku": {
+      "predeploy": "chmod +x bin/post_deploy && bin/post_deploy",
+      "postdeploy": "chmod +x bin/post_deploy && bin/post_deploy"
+    }
   },
   "formation": {
     "web": {
