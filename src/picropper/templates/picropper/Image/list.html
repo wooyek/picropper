@@ -1,0 +1,19 @@
+{% extends 'base/layout/page.html' %}
+{% load i18n %}
+{% block content %}
+  <div class="container ">
+    <div class="pt-5">
+      <h1>{% trans "Obrazy" %}</h1>
+      <div class="mt-5">
+        {% for object in object_list %}
+          {% load thumbnail %}
+          {% thumbnail object.file 150x150 crop as thumb %}
+          <a href="{% url 'picropper:ImageDetail' object.pk %}" class="mr-1 ml-1">
+            <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" class="img-thumbnail rounded mt-1 mb-1"/>
+          </a>
+        {% endfor %}
+        {% include "picropper/pagination.html" %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
