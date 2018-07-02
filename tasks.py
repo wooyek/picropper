@@ -305,7 +305,7 @@ def deploy(ctx, remote='dev', branch='master'):
     ctx.run("git push {remote} {branch}  --verbose".format(remote=remote, branch=branch))
     ctx.run("git checkout develop")
 	# Uncomment this to show release script output
-    # ctx.run("heroku logs -r {remote}".format(remote=remote))
+    ctx.run("heroku logs -r {remote}".format(remote=remote))
 	# Uncomment this to show docker running containers
     # ctx.run("ssh developer@production.example.com docker ps")
     print("[ OK ] Deployed: " + get_current_version())
