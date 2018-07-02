@@ -36,4 +36,6 @@ GS_CREDENTIALS = service_account.Credentials.from_service_account_info({
 GS_BUCKET_NAME = core.env('GOOGLE_STORAGE_BUCKET')
 
 # https://github.com/jschneier/django-storages/pull/412
+# Setting this to true needs a storage.buckets.get permission
+# https://cloud.google.com/storage/docs/access-control/iam-roles
 GS_ALWAYS_GET_BUCKET = False
