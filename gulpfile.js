@@ -52,7 +52,7 @@ gulp.task('css', function () {
 
 
 gulp.task('jquery', function () {
-    return gulp.src('./node_modules/jquery/dist/jquery.js')
+    return gulp.src('./node_modules/jquery/dist/jquery.min.js')
         .pipe(gulp.dest(config.outputDir + '/js'));
 });
 

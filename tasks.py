@@ -234,7 +234,8 @@ def release_finish(ctx):
 
 
 # noinspection PyUnusedLocal
-@task(isort, check, pip_compile, sync, detox, bump, sync_master)
+# @task(isort, check, pip_compile, sync, detox, bump, sync_master)
+@task(isort, sync, bump, sync_master)
 def release(ctx):
     """Build new package version release and sync repo"""
 
