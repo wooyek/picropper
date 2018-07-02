@@ -15,7 +15,7 @@ CSS = (
 )
 
 JS = (
-    assets_js / "jquery.js",
+    assets_js / "jquery.min.js",
     assets_js / "bootstrap.js",
     assets_js / "main.js",
 )
