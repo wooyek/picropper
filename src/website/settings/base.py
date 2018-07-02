@@ -35,7 +35,6 @@ from .components.debug_toolbar import *  # noqa: F402 F403 isort:skip
 from .components.django_assets import *  # noqa: F402 F403 isort:skip
 # from .components.celery import *  # noqa: F402 F403 isort:skip
 from .components.import_export import *  # noqa: F402 F403 isort:skip
-from .components.google_cloud_storage import *  # noqa: F402 F403 isort:skip
 from .components.pycountry import *  # noqa: F402 F403 isort:skip
 from .components.sentry import *  # noqa: F402 F403 isort:skip
 from .components.newrelic import *  # noqa: F402 F403 isort:skip
@@ -47,6 +46,9 @@ from .components.django_filer import *  # noqa: F402 F403 isort:skip
 # from .components.gis import *  # noqa: F402 F403 isort:skip
 # from .components.intercom import *  # noqa: F402 F403 isort:skip
 from .components.pure_pagination import *  # noqa: F402 F403 isort:skip
+
+if 'GOOGLE_STORAGE_ID' in os.environ:
+    from .components.google_cloud_storage import *  # noqa: F402 F403 isort:skip
 
 # Other imports can cause change in core settings
 # we should import core last
