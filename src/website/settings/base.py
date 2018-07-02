@@ -35,6 +35,7 @@ from .components.debug_toolbar import *  # noqa: F402 F403 isort:skip
 from .components.django_assets import *  # noqa: F402 F403 isort:skip
 # from .components.celery import *  # noqa: F402 F403 isort:skip
 from .components.import_export import *  # noqa: F402 F403 isort:skip
+from .components.google_cloud_storage import *  # noqa: F402 F403 isort:skip
 from .components.pycountry import *  # noqa: F402 F403 isort:skip
 from .components.sentry import *  # noqa: F402 F403 isort:skip
 from .components.newrelic import *  # noqa: F402 F403 isort:skip

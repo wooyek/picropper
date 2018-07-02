@@ -1,0 +1,11 @@
+# Storages
+#django-storages
+-e git+https://github.com/wooyek/django-storages@feature/gcs-no-storage-admin-support#egg=django-storages
+grpcio==1.4.0
+google-cloud-core==0.26.0
+google-cloud==0.27.0
+protobuf
+#* google-cloud==0.27.0
+# - google-cloud-core [required: <0.27dev,>=0.26.0, installed: 0.27.1]
+# - google-cloud-storage [required: >=1.3.0,<1.4dev, installed: 1.5.0]
+google-cloud-storage==1.3.2

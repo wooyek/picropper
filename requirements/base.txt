@@ -41,5 +41,7 @@ raven
 requests
 whitenoise
 
+-r components/google_cloud_storage.txt
+
 --find-links=local
 

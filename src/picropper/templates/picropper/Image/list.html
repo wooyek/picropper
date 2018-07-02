@@ -11,6 +11,8 @@
           <a href="{% url 'picropper:ImageDetail' object.pk %}" class="mr-1 ml-1">
             <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" class="img-thumbnail rounded mt-1 mb-1"/>
           </a>
+        {% empty %}
+          <p>{% trans "No pictures here, please upload some" %}</p>
         {% endfor %}
         {% include "picropper/pagination.html" %}
       </div>

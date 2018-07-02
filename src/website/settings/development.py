@@ -47,4 +47,4 @@ EMAIL_QUEUE_EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGGING['handlers']['mail_admins']['email_backend'] = 'django.core.mail.backends.dummy.EmailBackend'  # noqa: F405
 # LOGGING['handlers']['mail_admins']['email_backend'] = 'django.core.mail.backends.console.EmailBackend'  # noqa: F405
 
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+# DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
