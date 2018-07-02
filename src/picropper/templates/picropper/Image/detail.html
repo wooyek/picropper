@@ -10,7 +10,9 @@
           <div class="card m-2" style="width: 300px">
             <img src="{{ version.url }}" height="300" width="300" class="card-img-top"/>
             <div class="card-body">
-              <h5 class="card-title">{{ name }}</h5>
+              <h5 class="card-title">
+                <a href="{{ version.url }}" class="">{{ name }}</a>
+              </h5>
               <a href="{{ version.url }}" class="btn btn-primary" download="{{ object.file.name }}">{% trans "Pobierz" %} {{ version.width }}x{{ version.height }}</a>
             </div>
           </div>
