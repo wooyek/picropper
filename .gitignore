@@ -98,3 +98,4 @@ src/website/settings/production.env
 data/db.dev.sqlite3
 node_modules
 secrets.env
+src/website/settings/picropper-912fbd19073b.json
