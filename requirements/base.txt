@@ -37,6 +37,7 @@ pycountry
 pytz
 pathlib ; python_version < '3.3'
 six
+sentry-heroku
 raven
 requests
 whitenoise
